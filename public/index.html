@@ -32,5 +32,20 @@
         </div>
       </form>
     </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript">
+      let socket = io();
+
+      // ket noi server trong file .html
+      socket.on("connect", () => {
+        console.log("ket noi thanh cong ben site index.html");
+      });
+
+      // ngat ket noi voi server
+
+      socket.on("disconnect", () => {
+        console.log("ngat ket noi den server");
+      });
+    </script>
   </body>
 </html>
